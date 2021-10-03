@@ -1,0 +1,85 @@
+.undangan {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .undangan-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+
+    .date {
+      text-align: center;
+
+      h3 {
+        margin: 0;
+        font-family: $font-base;
+        font-size: 10vmin;
+        font-weight: normal;
+        line-height: 7vmin;
+        color: $color-green1;
+      }
+
+      p {
+        font-family: $font-base;
+        font-size: 3vmin;
+        font-weight: normal;
+        color: $color-green1;
+      }
+    }
+
+    .divider {
+      font-family: $font-base;
+      font-size: 8vmin;
+      color: $color-green1;
+    }
+  }
+
+  .undangan-second {
+    margin-top: 15vmin;
+
+    p {
+      text-align: center;
+      font-family: $font-base;
+      font-size: 4vmin;
+      color: $color-green1;
+    }
+  }
+
+  .undangan-third {
+    margin-top: 15vmin;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    row-gap: 6vmin;
+
+    .mempelai {
+      text-align: center;
+      color: $color-green1;
+
+      .photo {
+        position: relative;
+        width: 25vmin;
+        height: 25vmin;
+        margin: auto;
+      }
+
+      h3 {
+        font-family: $font-title;
+        font-size: 7vmin;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-family: $font-base;
+        font-size: 3vmin;
+      }
+    }
+
+    .love-icon {
+      margin: auto;
+      width: 20vmin;
+    }
+  }
+}
