@@ -33,13 +33,13 @@ const Gallery = () => {
           <div className="wrapper">
             <div className="gallery-image-normal">
               <Image
-                src="/gallery/image-3.png"
+                src="/gallery/image-4.png"
                 layout="fill"
               />
             </div>
             <div className="gallery-image-semi">
               <Image
-                src="/gallery/image-4.png"
+                src="/gallery/image-3.png"
                 layout="fill"
               />
             </div>

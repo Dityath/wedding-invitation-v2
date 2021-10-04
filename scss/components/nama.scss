@@ -1,0 +1,25 @@
+.nama {
+  text-align: center;
+  margin-top: 30vmin;
+  margin-bottom: 10vmin;
+
+  .nama-title {
+    h1 {
+      margin: 0;
+      font-family: $font-title;
+      color: $color-green1;
+      font-size: 16vmin;
+      font-style: normal;
+      font-weight: normal;
+
+      &:nth-child(2) {
+        margin-top: -11vmin;
+        opacity: 0.3;
+      }
+
+      &:last-child {
+        margin-top: -11vmin;
+      }
+    }
+  }
+}

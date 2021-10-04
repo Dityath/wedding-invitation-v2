@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   gap: 6vmin;
-  padding-bottom: 7vmin;
+  padding-bottom: 10vmin;
 
   .left {
     color: $color-green1;
@@ -36,6 +36,21 @@
       font-family: $font-base;
       font-size: 5vmin;
       margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .akad {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
     }
   }
 }

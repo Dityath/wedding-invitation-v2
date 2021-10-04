@@ -83,3 +83,18 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .undangan {
+    .undangan-third {
+      flex-direction: row;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 20vmin;
+
+      .love-icon {
+        margin: 5vmin;
+      }
+    }
+  }
+}

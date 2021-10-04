@@ -6,6 +6,9 @@ import Gallery from "./components/gallery";
 import Video from "./components/video";
 import Amplop from "./components/amplop";
 import Einvitation from "./components/einvitation";
+import Nama from "./components/nama";
+import Pesan from "./components/pesan";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +19,7 @@ export default function Home() {
       </Head>
       <div className="index-background">
         <Main />
+        <Nama />
         <Undangan />
         <Akad />
       </div>
@@ -23,7 +27,9 @@ export default function Home() {
       <div className="free-space" />
       <Video />
       <Amplop />
+      <Pesan />
       <Einvitation />
+      <Footer />
     </div>
   );
 }

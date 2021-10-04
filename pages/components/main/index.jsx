@@ -16,13 +16,6 @@ const Main = () => {
         <p>{newWords.map((word) => word + "")}</p>
         <hr />
       </div>
-      <div className="main-second">
-        <div className="main-second-title">
-          <h1>Lukman</h1>
-          <h1>&</h1>
-          <h1>Aisyah</h1>
-        </div>
-      </div>
     </section>
   )
 }

@@ -18,12 +18,12 @@
 
     .gallery-image-normal {
       position: relative;
-      width: 40vmin;
+      width: 39vmin;
       height: 34vmin;
     }
     .gallery-image-semi {
       position: relative;
-      width: 43vmin;
+      width: 44vmin;
       height: 34vmin;
     }
     .gallery-image-large {
@@ -42,6 +42,15 @@
         gap: 3vmin;
         justify-content: center;
       }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .gallery {
+    .gallery-container {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }
