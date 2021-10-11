@@ -28,7 +28,8 @@ export default function Home() {
       <Video />
       <Amplop />
       <Pesan />
-      <Einvitation />
+      {/* belum dipakai sekarang
+      <Einvitation /> */}
       <Footer />
     </div>
   );

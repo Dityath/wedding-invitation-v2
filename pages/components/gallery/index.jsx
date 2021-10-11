@@ -11,12 +11,14 @@ const Gallery = () => {
               <Image
                 src="/gallery/image-1.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="gallery-image-semi">
               <Image
                 src="/gallery/image-2.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -25,6 +27,7 @@ const Gallery = () => {
               <Image
                 src="/gallery/image-5.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -35,12 +38,14 @@ const Gallery = () => {
               <Image
                 src="/gallery/image-4.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="gallery-image-semi">
               <Image
                 src="/gallery/image-3.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -49,6 +54,7 @@ const Gallery = () => {
               <Image
                 src="/gallery/image-6.png"
                 layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>

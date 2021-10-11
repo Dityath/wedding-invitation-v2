@@ -1,0 +1,20 @@
+.footer-container {
+  width: 100%;
+  padding: 4vmin 0;
+  p {
+    text-align: center;
+    color: $color-gray;
+    font-size: 2.4vmin;
+    font-family: $font-base;
+    line-height: 3vmin;
+
+    span {
+      color: $color-green1;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-green1;
+    }
+  }
+}
