@@ -14,6 +14,14 @@
   background-size: 180%, cover;
 
   @import "./components/main.scss";
+
+  .bottom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+
   @import "./components/nama.scss";
   @import "./components/undangan.scss";
   @import "./components/akad.scss";

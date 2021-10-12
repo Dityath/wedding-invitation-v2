@@ -1,16 +1,21 @@
-import Main from "./components/main/index";
-import Undangan from "./components/undangan/index"
+import Main from "../components/main/index";
+import Undangan from "../components/undangan/index"
 import Head from "next/head";
-import Akad from "./components/akad";
-import Gallery from "./components/gallery";
-import Video from "./components/video";
-import Amplop from "./components/amplop";
-import Einvitation from "./components/einvitation";
-import Nama from "./components/nama";
-import Pesan from "./components/pesan";
-import Footer from "./components/footer";
+import Akad from "../components/akad";
+import Gallery from "../components/gallery";
+import Video from "../components/video";
+import Amplop from "../components/amplop";
+import Einvitation from "../components/einvitation";
+import Nama from "../components/nama";
+import Pesan from "../components/pesan";
+import Footer from "../components/footer";
+
+import { useState } from "react";
+import Expand from 'react-expand-animated';
 
 export default function Home() {
+  const [reveal, setReveal] = useState(false)
+
   return (
     <div>
       <Head>
@@ -19,18 +24,38 @@ export default function Home() {
       </Head>
       <div className="index-background">
         <Main />
-        <Nama />
-        <Undangan />
-        <Akad />
+        <div className="bottom-button">
+          {reveal?
+          '':
+            <button
+              onClick={() => setReveal(true)}
+            >
+              bottom
+            </button>
+          }
+        </div>
+        <Expand
+          open={reveal}
+          duration={1000}
+        >
+          <Nama />
+          <Undangan />
+          <Akad />
+        </Expand>
       </div>
-      <Gallery />
-      <div className="free-space" />
-      <Video />
-      <Amplop />
-      <Pesan />
-      {/* belum dipakai sekarang
-      <Einvitation /> */}
-      <Footer />
+
+      <Expand
+        open={reveal}
+        duration={1000}
+      >
+        <Gallery />
+        <div className="free-space" />
+        <Video />
+        <Amplop />
+        <Pesan />
+        <Einvitation />
+        <Footer />
+      </Expand>
     </div>
   );
 }
