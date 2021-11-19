@@ -1,5 +1,7 @@
 import MainComponent from "../components";
 
-export default function Home() {
+const Custom404 = () => {
   return <MainComponent />;
-}
+};
+
+export default Custom404;
