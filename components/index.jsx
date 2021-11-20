@@ -1,6 +1,5 @@
 import Main from "../components/main/index";
 import Undangan from "../components/undangan/index";
-import Head from "next/head";
 import Akad from "../components/akad";
 import Gallery from "../components/gallery";
 import Video from "../components/video";
@@ -10,32 +9,45 @@ import Nama from "../components/nama";
 import Pesan from "../components/pesan";
 import Footer from "../components/footer";
 
+import Seo from "./seo";
+
+import Switch from "./switch";
+
 import { useState } from "react";
 import Expand from "react-expand-animated";
+import Sound from "react-sound";
 
 const MainComponent = () => {
   const [reveal, setReveal] = useState(false);
+  const [isOn, setIsOn] = useState(false);
+
+  const lagu =
+    "https://res.cloudinary.com/bagastri07/video/upload/v1620572921/y2mate.com_-_Marry_Me_Thomas_Rhett_Lyrics_btvj9e.mp3";
 
   return (
-    <div>
-      <Head>
-        <title>Lukman Aisyah</title>
-        <meta name="description" content="Contoh Undangan Pernikahan" />
-
-        <meta name="og:title" content="Lukman Aisyah" key="title" />
-        <meta
-          name="og:description"
-          content="Contoh Undangan Pernikahan"
-          key="og:description"
-        />
-      </Head>
+    <>
+      <Sound
+        url={lagu}
+        playStatus={isOn ? Sound.status.PLAYING : Sound.status.PAUSED}
+        loop={true}
+        volume={30}
+      />
+      <Seo />
+      {reveal ? <Switch isOn={isOn} onClick={() => setIsOn(!isOn)} /> : ""}
       <div className="index-background">
         <Main />
         <div className="bottom-button">
           {reveal ? (
             ""
           ) : (
-            <button onClick={() => setReveal(true)}>bottom</button>
+            <button
+              onClick={() => {
+                setReveal(true);
+                setIsOn(true);
+              }}
+            >
+              bottom
+            </button>
           )}
         </div>
         <Expand open={reveal} duration={1000}>
@@ -54,7 +66,7 @@ const MainComponent = () => {
         <Einvitation />
         <Footer />
       </Expand>
-    </div>
+    </>
   );
 };
 

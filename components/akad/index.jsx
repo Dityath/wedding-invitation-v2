@@ -41,4 +41,4 @@ const Akad = () => {
   )
 }
 
-export default Akad
+export default Akad;

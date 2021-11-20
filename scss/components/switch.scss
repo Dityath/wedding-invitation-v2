@@ -1,0 +1,46 @@
+.containerSwitch {
+  position: fixed;
+  bottom: 0;
+  left: 60px;
+  z-index: 99;
+  background-color: $color-green3;
+  height: 90px;
+  width: 200px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  transition: 0.5s;
+
+  p {
+    font-family: $font-base;
+    color: $color-green1;
+  }
+  .switch {
+    width: 60px;
+    height: 30px;
+    border-radius: 100px;
+    padding: 5px;
+    display: flex;
+    cursor: pointer;
+  
+    div {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 200px;
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.02);
+    }
+  
+    &.on {
+      background-color: $color-green2;
+      justify-content: flex-start;
+    }
+  
+    &.off {
+      background-color: #dddddd;
+      justify-content: flex-end;
+    }
+  }
+}
