@@ -17,6 +17,8 @@ import { useState } from "react";
 import Expand from "react-expand-animated";
 import Sound from "react-sound";
 
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const MainComponent = () => {
   const [reveal, setReveal] = useState(false);
   const [isOn, setIsOn] = useState(false);
@@ -44,6 +46,7 @@ const MainComponent = () => {
               onClick={() => {
                 setReveal(true);
                 setIsOn(true);
+                scroll.scrollTo(800);
               }}
             >
               bottom
