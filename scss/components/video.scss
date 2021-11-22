@@ -40,6 +40,9 @@
       right: 0;
       top: -95vmin;
       position: absolute;
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     .flower-2 {

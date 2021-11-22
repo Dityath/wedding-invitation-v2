@@ -86,3 +86,9 @@
     background-size: 100%, cover;
   }
 }
+
+.expand-button {
+  @media (max-width: 1023px) {
+    fill: $color-green1;
+  }
+}

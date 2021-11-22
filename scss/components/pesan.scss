@@ -2,6 +2,8 @@
 
   .pesan-main {
     padding: 7vmin 4vmin 7vmin;
+    position: relative;
+    z-index: 5;
   
     h1 {
       font-family: $font-title;
