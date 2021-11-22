@@ -4,6 +4,7 @@
   .main-first {
     text-align: center;
     padding-top: 20vmin;
+    z-index: 5;
 
     .main-first-title {
       font-family: $font-title;
@@ -22,5 +23,31 @@
       color: white;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+  }
+
+  .main-flowers {
+
+    .flower-1 {
+      left: 40px;
+      top: 80px;
+      position: absolute;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    .flower-2 {
+      right: 40px;
+      bottom: 120px;
+      position: absolute;
+
+      @media (max-width: 800px) {
+        right: 20px;
+        bottom: 100px;
+      }
+    }
+
+    
   }
 }

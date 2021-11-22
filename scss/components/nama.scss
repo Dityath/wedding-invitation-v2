@@ -1,25 +1,61 @@
 .nama {
-  text-align: center;
-  margin-top: 30vmin;
-  margin-bottom: 10vmin;
 
-  .nama-title {
-    h1 {
-      margin: 0;
-      font-family: $font-title;
-      color: $color-green1;
-      font-size: 16vmin;
-      font-style: normal;
-      font-weight: normal;
-
-      &:nth-child(2) {
-        margin-top: -11vmin;
-        opacity: 0.3;
+  .nama-container {
+    text-align: center;
+    margin-top: 30vmin;
+    margin-bottom: 10vmin;
+    z-index: 5;
+  
+    .nama-title {
+      h1 {
+        margin: 0;
+        font-family: $font-title;
+        color: $color-green1;
+        font-size: 16vmin;
+        font-style: normal;
+        font-weight: normal;
+  
+        &:nth-child(2) {
+          margin-top: -11vmin;
+          opacity: 0.3;
+        }
+  
+        &:last-child {
+          margin-top: -11vmin;
+        }
       }
+    }
+  }
 
-      &:last-child {
-        margin-top: -11vmin;
+  .nama-flower {
+    position: relative;
+
+    .flower-1 {
+      left: 70px;
+      top: -460px;
+      position: absolute;
+    }
+
+    .flower-2 {
+      left: 270px;
+      top: -360px;
+      position: absolute;
+    }
+
+    .flower-3 {
+      right: 70px;
+      top: -160px;
+      position: absolute;
+      
+      @media (max-width: 800px) {
+        display: none;
       }
+    }
+
+    .flower-4 {
+      left: -15vmin;
+      top: 0vmin;
+      position: absolute;
     }
   }
 }

@@ -60,21 +60,21 @@
 
 @media (min-width: 1024px) {
   .index-background {
-    background-size: 110%, cover;
+    background-size: 160%, cover;
     padding: 0 15vmin;
   }
 }
 
 @media (min-width: 1280px) {
   .index-background {
-    background-position: center -10vmin, center;
+    background-position: center 0vmin, center;
     background-size: 100%, cover;
   }
 }
 
 @media (min-width: 1536px) {
   .index-background {
-    background-position: center -25vmin, center;
+    background-position: center 0vmin, center;
     background-size: 100%, cover;
     padding: 0 30vmin;
   }
@@ -82,7 +82,7 @@
 
 @media (min-width: 1920px) {
   .index-background {
-    background-position: center -40vmin, center;
+    background-position: center 0vmin, center;
     background-size: 100%, cover;
   }
 }

@@ -1,100 +1,51 @@
 .pesan {
-  padding: 7vmin 4vmin 7vmin;
 
-  h1 {
-    font-family: $font-title;
-    font-weight: normal;
-    font-size: 10vmin;
-    color: $color-green1;
-    text-align: center;
-    margin: 0 0 10vmin;
-  }
-
-  .pesan-container {
-    margin: auto;
-    max-width: 1075px;
-
-    h3 {
-      font-family: $font-base;
-      font-size: 4vmin;
-      margin: 0;
+  .pesan-main {
+    padding: 7vmin 4vmin 7vmin;
+  
+    h1 {
+      font-family: $font-title;
+      font-weight: normal;
+      font-size: 10vmin;
       color: $color-green1;
+      text-align: center;
+      margin: 0 0 10vmin;
     }
-
-    hr {
-      color: $color-green1;
-    }
-
-    form {
-      font-family: $font-base;
-
-      input {
-        width: 96%;
-        border: 0;
-        background: $color-green3;
-        border-radius: 20px;
-        padding: 20px;
-        &:focus {
-          outline: none;
-        }
-      }
-
-      textarea {
-        margin-top: 15px;
-        width: 96%;
-        border: 0;
-        background: $color-green3;
-        border-radius: 20px;
-        padding: 20px;
-        resize: none;
-        &:focus {
-          outline: none;
-        }
-      }
-
-      button {
-        margin-top: 15px;
-        width: 142px;
-        height: 41px;
-        background-color: $color-green1;
-        border-radius: 10px;
-        border: none;
-        color: white;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-
-    .comment-box {
-      margin-top: 30px;
-      width: 100%;
-      height: 70vmin;
-      overflow-y: scroll;
-    }
-  }
-}
-
-@media (max-width: 885px) {
-  .pesan {
+  
     .pesan-container {
+      margin: auto;
+      max-width: 1075px;
+  
+      h3 {
+        font-family: $font-base;
+        font-size: 4vmin;
+        margin: 0;
+        color: $color-green1;
+      }
+  
+      hr {
+        color: $color-green1;
+      }
+  
       form {
-        font-family: "Josefin Sans", cursive;
-
+        font-family: $font-base;
+  
         input {
-          width: 83%;
+          width: 96%;
           border: 0;
+          background: $color-green3;
           border-radius: 20px;
           padding: 20px;
           &:focus {
             outline: none;
           }
         }
-
+  
         textarea {
           margin-top: 15px;
-          width: 83%;
+          width: 96%;
           border: 0;
+          background: $color-green3;
           border-radius: 20px;
           padding: 20px;
           resize: none;
@@ -102,12 +53,13 @@
             outline: none;
           }
         }
-
+  
         button {
           margin-top: 15px;
           width: 142px;
           height: 41px;
-          border-radius: 20px;
+          background-color: $color-green1;
+          border-radius: 10px;
           border: none;
           color: white;
           &:hover {
@@ -115,13 +67,75 @@
           }
         }
       }
-
+  
       .comment-box {
         margin-top: 30px;
         width: 100%;
-        height: 50vmin;
+        height: 70vmin;
         overflow-y: scroll;
       }
     }
   }
+
+  @media (max-width: 885px) {
+    .pesan-main {
+      .pesan-container {
+        form {
+          font-family: "Josefin Sans", cursive;
+  
+          input {
+            width: 83%;
+            border: 0;
+            border-radius: 20px;
+            padding: 20px;
+            &:focus {
+              outline: none;
+            }
+          }
+  
+          textarea {
+            margin-top: 15px;
+            width: 83%;
+            border: 0;
+            border-radius: 20px;
+            padding: 20px;
+            resize: none;
+            &:focus {
+              outline: none;
+            }
+          }
+  
+          button {
+            margin-top: 15px;
+            width: 142px;
+            height: 41px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+  
+        .comment-box {
+          margin-top: 30px;
+          width: 100%;
+          height: 50vmin;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+
+  .pesan-flower {
+    position: relative;
+
+    .flower-1 {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+  }
 }
+

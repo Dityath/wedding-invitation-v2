@@ -17,12 +17,13 @@ const Gallery = () => {
   }, [animation, inView])
 
   return (
-    <motion.div
-      initial={{ y: "30vh", opacity: 0 }}
-      animate={animation}
-      transition={{type: "spring", duration: 2.6, bounce: 0}}
-    >
-      <section ref={ref} className="gallery">
+    <div ref={ref} className="gallery">
+      <motion.section
+        initial={{ y: "30vh", opacity: 0 }}
+        className="gallery-main"
+        animate={animation}
+        transition={{ type: "spring", duration: 5, bounce: 0 }}
+      >
         <h1>Photos Gallery</h1>
         <div className="gallery-container">
           <div className="mega-wrapper">
@@ -32,7 +33,7 @@ const Gallery = () => {
                   src="/gallery/image-1.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
               <div className="gallery-image-semi">
@@ -40,7 +41,7 @@ const Gallery = () => {
                   src="/gallery/image-2.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
             </div>
@@ -50,7 +51,7 @@ const Gallery = () => {
                   src="/gallery/image-5.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
             </div>
@@ -62,7 +63,7 @@ const Gallery = () => {
                   src="/gallery/image-4.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
               <div className="gallery-image-semi">
@@ -70,7 +71,7 @@ const Gallery = () => {
                   src="/gallery/image-3.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
             </div>
@@ -80,15 +81,30 @@ const Gallery = () => {
                   src="/gallery/image-6.png"
                   layout="fill"
                   objectFit="cover"
-                  alt='Foto Mempelai'
+                  alt="Foto Mempelai"
                 />
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </motion.div>
-  )
+      </motion.section>
+      <div className="gallery-flower">
+        <motion.div
+          className="flower"
+          initial={{ opacity: 0 }}
+          animate={animation}
+          transition={{ type: "spring", duration: 3 }}
+        >
+          <Image
+            src="/pattern/flower/fower transparant 3.png"
+            alt=""
+            width="346"
+            height="316.98"
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
 }
 
 export default Gallery

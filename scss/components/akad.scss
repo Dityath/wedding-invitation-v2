@@ -1,56 +1,87 @@
 .akad {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 6vmin;
-  padding-bottom: 30vmin;
-
-  .left {
-    color: $color-green1;
-    text-align: center;
-
-    p {
-      font-family: $font-base;
-      font-size: 3vmin;
-      margin: 0;
-    }
-
-    h5 {
-      font-family: $font-base;
-      font-size: 5vmin;
-      margin: 0;
-    }
-  }
-
-  .right {
-    color: $color-green1;
-    text-align: center;
-
-    p {
-      font-family: $font-base;
-      font-size: 3vmin;
-      margin: 0;
-    }
-
-    h5 {
-      font-family: $font-base;
-      font-size: 5vmin;
-      margin: 0;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .akad {
-    flex-direction: row;
-    justify-content: space-between;
-
+  .akad-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6vmin;
+    padding-bottom: 50vmin;
+    z-index: 5;
+  
     .left {
-      text-align: left;
+      color: $color-green1;
+      text-align: center;
+  
+      p {
+        font-family: $font-base;
+        font-size: 3vmin;
+        margin: 0;
+      }
+  
+      h5 {
+        font-family: $font-base;
+        font-size: 5vmin;
+        margin: 0;
+      }
+    }
+  
+    .right {
+      color: $color-green1;
+      text-align: center;
+  
+      p {
+        font-family: $font-base;
+        font-size: 3vmin;
+        margin: 0;
+      }
+  
+      h5 {
+        font-family: $font-base;
+        font-size: 5vmin;
+        margin: 0;
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .akad-main {
+      flex-direction: row;
+      justify-content: space-between;
+  
+      .left {
+        text-align: left;
+      }
+  
+      .right {
+        text-align: right;
+      }
+    }
+  }
+  
+  .akad-flower {
+    position: relative;
+    
+    .flower-1 {
+      z-index: 0;
+      position: absolute;
+      right: -15vmin;
+      bottom: 0;
+      
+      @media (max-width: 800px) {
+        right: -5vmin;
+        width: 381px;
+      }
     }
 
-    .right {
-      text-align: right;
+    .flower-2 {
+      z-index: 0;
+      position: absolute;
+      left: -15vmin;
+      bottom: 0;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
   }
 }

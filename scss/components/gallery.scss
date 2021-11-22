@@ -1,56 +1,73 @@
 .gallery {
-  padding-top: 7vmin;
-  padding-bottom: 7vmin;
-
-  h1 {
-    font-family: $font-title;
-    font-weight: normal;
-    font-size: 10vmin;
-    color: $color-green1;
-    text-align: center;
-    margin: 0 0 5vmin;
-  }
-
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3vmin;
-
-    .gallery-image-normal {
-      position: relative;
-      width: 39vmin;
-      height: 34vmin;
+  .gallery-main {
+    z-index: 5;
+    padding-top: 7vmin;
+    padding-bottom: 7vmin;
+    position: relative;
+  
+    h1 {
+      font-family: $font-title;
+      font-weight: normal;
+      font-size: 10vmin;
+      color: $color-green1;
+      text-align: center;
+      margin: 0 0 5vmin;
     }
-    .gallery-image-semi {
-      position: relative;
-      width: 44vmin;
-      height: 34vmin;
-    }
-    .gallery-image-large {
-      position: relative;
-      width: 86vmin;
-      height: 34vmin;
-    }
-
-    .mega-wrapper {
+  
+    .gallery-container {
       display: flex;
       flex-direction: column;
       gap: 3vmin;
-
-      .wrapper {
+  
+      .gallery-image-normal {
+        position: relative;
+        width: 39vmin;
+        height: 34vmin;
+      }
+      .gallery-image-semi {
+        position: relative;
+        width: 44vmin;
+        height: 34vmin;
+      }
+      .gallery-image-large {
+        position: relative;
+        width: 86vmin;
+        height: 34vmin;
+      }
+  
+      .mega-wrapper {
         display: flex;
+        flex-direction: column;
         gap: 3vmin;
+  
+        .wrapper {
+          display: flex;
+          gap: 3vmin;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .gallery-main {
+      .gallery-container {
+        flex-direction: row;
         justify-content: center;
       }
     }
   }
-}
 
-@media (min-width: 1280px) {
-  .gallery {
-    .gallery-container {
-      flex-direction: row;
-      justify-content: center;
+  .gallery-flower {
+    position: relative;
+
+    .flower {
+      z-index: 0;
+      left: -15vmin;
+      bottom: 0;
+      position: absolute;
     }
   }
+
 }
+

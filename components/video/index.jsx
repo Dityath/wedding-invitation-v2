@@ -2,9 +2,10 @@ import Iframe from "react-iframe";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const Video = () => {
-  const {ref, inView} = useInView();
+  const { ref, inView } = useInView();
   const animation = useAnimation();
 
   useEffect(() => {
@@ -12,16 +13,18 @@ const Video = () => {
       animation.start({
         y: 0,
         opacity: 1,
+        rotate: 0,
       });
     }
-  }, [animation, inView])
+  }, [animation, inView]);
 
   return (
     <section ref={ref} className="video">
       <motion.div
         initial={{ y: "30vh", opacity: 0 }}
+        className="video-main"
         animate={animation}
-        transition={{type: "spring", duration: 2.6, bounce: 0}}
+        transition={{ type: "spring", duration: 2.6, bounce: 0 }}
       >
         <h1>Video Prewedding</h1>
         <div className="container">
@@ -35,8 +38,36 @@ const Video = () => {
           />
         </div>
       </motion.div>
+      <div className="video-flower">
+        <motion.div
+          className="flower-1"
+          initial={{ opacity: 0 }}
+          animate={animation}
+          transition={{ type: "spring", duration: 3 }}
+        >
+          <Image
+            src="/pattern/flower/flower transparant 3.png"
+            alt=""
+            width="286"
+            height="411.56"
+          />
+        </motion.div>
+        <motion.div
+          className="flower-2"
+          initial={{ rotate: 20, y: 10, opacity: 0 }}
+          animate={animation}
+          transition={{ type: "spring", duration: 3 }}
+        >
+          <Image
+            src="/pattern/flower/flower 6.png"
+            alt=""
+            width="144"
+            height="132"
+          />
+        </motion.div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default Video
