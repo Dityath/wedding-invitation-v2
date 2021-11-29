@@ -1,17 +1,20 @@
-import Main from "../components/main/index";
-import Undangan from "../components/undangan/index";
-import Akad from "../components/akad";
-import Gallery from "../components/gallery";
-import Video from "../components/video";
-import Amplop from "../components/amplop";
-import Einvitation from "../components/einvitation";
-import Nama from "../components/nama";
-import Pesan from "../components/pesan";
-import Footer from "../components/footer";
+import loadable from "@loadable/component";
 
-import Seo from "./seo";
+// loadable
+const Main = loadable(() => import("../components/main/index"));
+const Undangan = loadable(() => import("../components/undangan/index"));
+const Akad = loadable(() => import("../components/akad"));
+const Gallery = loadable(() => import("../components/gallery"));
+const Video = loadable(() => import("../components/video"));
+const Amplop = loadable(() => import("../components/amplop"));
+const Einvitation = loadable(() => import("../components/einvitation"));
+const Nama = loadable(() => import("../components/nama"));
+const Pesan = loadable(() => import("../components/pesan"));
+const Footer = loadable(() => import("../components/footer"));
 
-import Switch from "./switch";
+const Seo = loadable(() => import("./seo"));
+
+const Switch = loadable(() => import("./switch"));
 
 import { useState } from "react";
 import Expand from "react-expand-animated";
