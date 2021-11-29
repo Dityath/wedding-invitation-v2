@@ -1,7 +1,7 @@
 // import Iframe from "react-iframe";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { createRef, useEffect, useState } from "react";
 import Image from "next/image";
 
 import loadable from "@loadable/component";
@@ -10,6 +10,9 @@ const Iframe = loadable(() => import("react-iframe"));
 const Video = () => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const [showVideo, setShowVideo] = useState(false);
+
+  const container = createRef();
 
   useEffect(() => {
     if (inView) {
@@ -19,7 +22,31 @@ const Video = () => {
         rotate: 0,
       });
     }
-  }, [animation, inView]);
+
+    if (window && "IntersectionObserver" in window) {
+      if (container && container.current) {
+        videoObserver.observe(container.current);
+      }
+    } else {
+      setShowVideo(true);
+    }
+  }, [animation, container, inView]);
+
+  const videoObserver = new IntersectionObserver(onVideoIntersection, {
+    rootMargin: "100px 0px",
+    threshold: 0.25,
+  });
+
+  function onVideoIntersection(entries) {
+    if (!entries || entries.length <= 0) {
+      return;
+    }
+
+    if (entries[0].isIntersecting) {
+      setShowVideo(true);
+      videoObserver.disconnect();
+    }
+  }
 
   return (
     <section ref={ref} className="video">
@@ -30,15 +57,17 @@ const Video = () => {
         transition={{ type: "spring", duration: 2.6, bounce: 0 }}
       >
         <h1>Video Prewedding</h1>
-        <div className="container">
-          <Iframe
-            className="responsiveYt"
-            url="https://www.youtube.com/embed/Iy-dJwHVX84"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfFullScreen
-          />
+        <div ref={container} className="container">
+          {showVideo ? (
+            <Iframe
+              className="responsiveYt"
+              url="https://www.youtube.com/embed/Iy-dJwHVX84"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfFullScreen
+            />
+          ) : undefined}
         </div>
       </motion.div>
       <div className="video-flower">
