@@ -21,15 +21,15 @@ const Amplop = () => {
     customPaging: function (i) {
       if (i === 0) {
         return (
-          <a>
+          <p>
             Bank Transfer
-          </a>
+          </p>
         );
       } else if (i === 1) {
         return (
-          <a>
+          <p>
             Dana
-          </a>
+          </p>
         );
       }
     },
