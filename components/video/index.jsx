@@ -1,11 +1,8 @@
-// import Iframe from "react-iframe";
+import Iframe from "react-iframe";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { createRef, useEffect, useState } from "react";
 import Image from "next/image";
-
-import loadable from "@loadable/component";
-const Iframe = loadable(() => import("react-iframe"));
 
 const Video = () => {
   const { ref, inView } = useInView();
