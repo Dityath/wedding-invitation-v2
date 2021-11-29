@@ -38,7 +38,7 @@ const Nama = () => {
           transition={{ type: "spring", duration: 3 }}
         >
           <Image
-            src="/pattern/flower/flower 8.png"
+            src="/pattern/flower/flower 8.webp"
             alt=""
             width="89"
             height="86"

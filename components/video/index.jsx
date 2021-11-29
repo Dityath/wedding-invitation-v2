@@ -62,7 +62,7 @@ const Video = () => {
           transition={{ type: "spring", duration: 3 }}
         >
           <Image
-            src="/pattern/flower/flower 6.png"
+            src="/pattern/flower/flower 6.webp"
             alt=""
             width="144"
             height="132"

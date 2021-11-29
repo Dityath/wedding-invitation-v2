@@ -33,7 +33,7 @@ const Main = () => {
           transition={{ duration: 5, ease: "easeIn" }}
         >
           <Image
-            src="/pattern/flower/flower 2.png"
+            src="/pattern/flower/flower 2.webp"
             alt="flower image"
             width="208"
             height="190"
@@ -46,7 +46,7 @@ const Main = () => {
           transition={{ duration: 3, ease: "easeIn" }}
         >
           <Image
-            src="/pattern/flower/flower 5.png"
+            src="/pattern/flower/flower 5.webp"
             alt="flower image 2"
             width="170"
             height="156"
