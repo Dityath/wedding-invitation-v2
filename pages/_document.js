@@ -12,6 +12,9 @@ class MyDocument extends Document {
         <Head>
           <Html lang="id" />
 
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

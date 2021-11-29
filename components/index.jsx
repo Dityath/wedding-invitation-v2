@@ -22,22 +22,31 @@ import Sound from "react-sound";
 import { motion } from "framer-motion";
 
 import { animateScroll as scroll } from "react-scroll";
+import { useAmp } from "next/amp";
+
+export const ampConfig = { amp: "hybrid" };
 
 const MainComponent = () => {
   const [reveal, setReveal] = useState(false);
   const [isOn, setIsOn] = useState(false);
+
+  const loadAmp = useAmp();
 
   const lagu =
     "https://res.cloudinary.com/bagastri07/video/upload/v1620572921/y2mate.com_-_Marry_Me_Thomas_Rhett_Lyrics_btvj9e.mp3";
 
   return (
     <>
-      <Sound
-        url={lagu}
-        playStatus={isOn ? Sound.status.PLAYING : Sound.status.PAUSED}
-        loop={true}
-        volume={30}
-      />
+      {loadAmp ? (
+        ""
+      ) : (
+        <Sound
+          url={lagu}
+          playStatus={isOn ? Sound.status.PLAYING : Sound.status.PAUSED}
+          loop={true}
+          volume={30}
+        />
+      )}
       <Seo />
       {reveal ? <Switch isOn={isOn} onClick={() => setIsOn(!isOn)} /> : ""}
       <div className="index-background">
