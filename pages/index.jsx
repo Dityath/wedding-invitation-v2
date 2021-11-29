@@ -1,7 +1,4 @@
-import loadable from "@loadable/component";
-
-// import MainComponent from "../components";
-const MainComponent = loadable(() => import("../components"));
+import MainComponent from "../components";
 
 export default function Home() {
   return <MainComponent />;
